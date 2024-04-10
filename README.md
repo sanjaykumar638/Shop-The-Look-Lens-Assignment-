@@ -22,23 +22,23 @@ Now this box can move in image. Its position is calculated by its top-left corne
 Write a program which takes the above Matrix as input(2d array, or an array with 144 chars, whatever is easy for you) and returns the object with properties(top, left, height, width). Top, left is the position on x axis and y axis respectively. Height, width is selfexplanatory Function should return a Map or object of your custom class with above. properties in it.
 
 //Output//
-![alt text](image-1.png)
+![alt text](Output-1.png)
 
 2. For the given array [9,33,0,7,2,82,77], WAP to divide each number of the array by the next number.Divide the last number by first number of array. Provide proper exceptional handling for 0. 
 
 //Output//
-![alt text](image-2.png)
+![alt text](Output-2.png)
 
 3. Find the sum of all the numbers in a string which is divisible by 3 and also find the last 
 such number. Example "The best 6 of 8 will get 9 points", sum = 12, last=9. 
 
 //Output//
-![alt text](image-3.png)
+![alt text](Output-3.png)
 
 4. There are 100 man making a circle each man is wearing a T-shit with a number 1 to 100 in series. Person with Number 1 on his/her T-Shirt got a gun now 1 kill 2 and give that gun to 3 and then 3 kill 4 and give that gun to 5.. then so on 99 killed 100 and give that gun again to 1.WAP to find which man is left with a gun on his hand at the end ?? 
 
 //Output//
-![alt text](image-4.png)
+![alt text](Output-4.png)
 
 5. Write the name of tables and their columns that need to be created in the DB to store following relationship(DO NOT draw ER diagrams, Only basic columns and relationship need to be shown) There are many hotels, each hotel can have multiple menus, each menu can have multiple food items, food items can belong to multiple menus. 
 
