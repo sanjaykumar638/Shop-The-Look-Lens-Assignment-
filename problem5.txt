@@ -1,0 +1,60 @@
+ #SQL code can be used to create the tables:#
+
+CREATE TABLE hotel (
+  hotel_id INT NOT NULL AUTO_INCREMENT,
+  hotel_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (hotel_id)
+);
+
+CREATE TABLE menu (
+  menu_id INT NOT NULL AUTO_INCREMENT,
+  hotel_id INT NOT NULL,
+  menu_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (menu_id),
+  FOREIGN KEY (hotel_id) REFERENCES hotel (hotel_id)
+);
+
+CREATE TABLE food_item (
+  food_item_id INT NOT NULL AUTO_INCREMENT,
+  menu_id INT NOT NULL,
+  food_item_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (food_item_id),
+  FOREIGN KEY (menu_id) REFERENCES menu (menu_id)
+);
+
+CREATE TABLE junction_table (
+  hotel_id INT NOT NULL,
+  menu_id INT NOT NULL,
+  FOREIGN KEY (hotel_id) REFERENCES hotel (hotel_id),
+  FOREIGN KEY (menu_id) REFERENCES menu (menu_id)
+);
+
+#insert data into the hotel table:#
+
+INSERT INTO hotel (hotel_name) VALUES ('Hilton');
+INSERT INTO hotel (hotel_name) VALUES ('Marriott');
+INSERT INTO hotel (hotel_name) VALUES ('Hyatt');
+
+# SQL code can be used to insert data into the menu table:#
+
+INSERT INTO menu (hotel_id, menu_name) VALUES (1, 'Breakfast');
+INSERT INTO menu (hotel_id, menu_name) VALUES (1, 'Lunch');
+INSERT INTO menu (hotel_id, menu_name) VALUES (1, 'Dinner');
+INSERT INTO menu (hotel_id, menu_name) VALUES (2, 'Breakfast');
+INSERT INTO menu (hotel_id, menu_name) VALUES (2, 'Lunch');
+INSERT INTO menu (hotel_id, menu_name) VALUES (2, 'Dinner');
+INSERT INTO menu (hotel_id, menu_name) VALUES (3, 'Breakfast');
+INSERT INTO menu (hotel_id, menu_name) VALUES (3, 'Lunch');
+INSERT INTO menu (hotel_id, menu_name) VALUES (3, 'Dinner');
+
+#SQL code can be used to insert data into the food item table:#
+
+INSERT INTO food_item (menu_id, food_item_name) VALUES (1, 'Scrambled eggs');
+INSERT INTO food_item (menu_id, food_item_name) VALUES (1, 'Bacon');
+INSERT INTO food_item (menu_id, food_item_name) VALUES (1, 'Toast');
+INSERT INTO food_item (menu_id, food_item_name) VALUES (2, 'Sandwich');
+INSERT INTO food_item (menu_id, food_item_name) VALUES (2, 'Soup');
+INSERT INTO food_item (menu_id, food_item_name) VALUES (2, 'Salad');
+INSERT INTO food_item (menu_id, food_id) VALUES (3, 'Steak');
+INSERT INTO food_item (menu_id, food_item_name) VALUES (3, 'Chicken');
+INSERT INTO food_item (menu_id, food_item_name) VALUES (3, 'Fish');
